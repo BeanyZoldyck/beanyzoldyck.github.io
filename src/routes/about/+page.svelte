@@ -61,7 +61,7 @@
 				my favorite models are <a href="https://cursor.com/blog/composer-2-5" class="text-purple-700" target="_blank"
 					>composer 2.5</a
 				>, <a href="https://z.ai/blog/glm-5.1" class="text-purple-700" target="_blank"
-					>glm 5.1</a
+					>glm 5.2</a
 				>, <a href="https://openai.com/index/introducing-gpt-5-3-codex/" class="text-purple-700" target="_blank"
 					>gpt5.3-codex</a
 				>, and <a href="https://deepmind.google/models/gemma/gemma-4/" class="text-purple-700" target="_blank"
