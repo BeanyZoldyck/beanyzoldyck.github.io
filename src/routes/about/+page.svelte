@@ -33,10 +33,11 @@
 					target="_blank"
 				>
 					lifting</a
-				>
-				and
+				>,
 				<a href="https://youtu.be/5QIY6ID1YlM" class="text-purple-700" target="_blank">Overwatch</a
-				>, linked are my proudest acheivments in those passions.
+				>, and <a href="https://devpost.com/software/moggie" class="text-purple-700" target="_blank">hackathons</a
+				>
+        linked are my proudest acheivments in those passions.
 			</p>
 		</div>
 
