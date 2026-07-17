@@ -4,6 +4,17 @@ This affliction became terminal when I attended BearHacks in Canada. A whole 3 h
 This trip marks a turning point, as before BearHacks, the longest I traveled for a hackathon was about an hour. But this sets a precedent that there is little that can get between me and a reason to whip out the sidtop and flex on some claudelets with opencode.\n
 \n
 This is somewhat worrying, but not for the reason you think: it's because I didn't win...\n
-Now this may come as a surprise to the 3 visitors (me, Nitin, and me refreshing the page) of this "blog", but yes. There are hackathons that I cannot win. The reason this is alarming is that it shows I am willing to go the extra mile to showcase mediocrity. Like, you would expect someone spending hundreds to attend a hackathon to *atleast* put their best foot forward, but I seem to prove a counterexample to that theory. \n
+Now this may come as a surprise to the 3 visitors (me, Nitin, and me refreshing the page) of this "blog", but yes. There are hackathons that I cannot win. The reason this is alarming is that it shows I am willing to go the extra mile to showcase mediocrity. Like, you would expect someone spending hundreds to attend a hackathon to *atleast* put their best foot forward, but I seem to prove a counterexample to that rule of thumb. \n
 Is this due to my lackadaisical worldview? The masking of my own ineptitude? Perhaps the myriad excuses I have at any of these long-distance hackathons are more valid than I thought...\n
 I don't have an answer just yet, which makes this all the more terrifying...\n
+\n\n
+(addendum)\n
+Although, If I were to stop beating around the bush, I don't even think that poorly of the event / project that made me feel this way.\n
+
+At Bearhacks, Nitin and I made Gridlock. It was the coolest idea I ever came up with, and my only regret was that we didn't think of it sooner. The crux of the idea was memory dumping a program and continuing it elsewhere when it crashed. It had integrations with the distributive computing sponsor, a solana marketplace, and was just a cool ass idea.\n
+
+Sadly, though, we trolled the submission as we worked on it well past our agreed finish time and couldn't shoot a video in time (this is half of the reason I bought a new phone) and we went home with nothing.\n
+
+The 3 hour ride back was almost baptismal. This was the first time I lost a hackathon in 2026, and I honestly forgot what that even felt like at the time. Being somewhat of an absolutist, I kinda liked the feeling. There is no point in reveling in your wins if you can't accept your losses (though me and Nitin vacated the premises at record speeds, we aurafarmed way too much to fraud out like that and stay for questioning)\n
+
+So With this last part, I can confidently say (having got back into my groove with Berkeley's AI Hackathon) that I don't regret BearHacks. It was a great lesson and even greater experience overall. Although like I said this is probably contingent on the fact I did infact start winning hackathons outside of the midwest.
