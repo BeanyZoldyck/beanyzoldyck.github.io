@@ -21,7 +21,7 @@
 		},
 		{
 			title: 'BabbleFish',
-			desc: 'hckathon project that summarizes, translates, and semantically searches text channels',
+			desc: 'hackathon project that summarizes, translates, and semantically searches text channels',
 			link: 'https://devpost.com/software/babelfetch',
 			info: "it lost the Gemini track to a project that didn't use Gemini"
 		},
@@ -34,7 +34,7 @@
 		{
 			title: 'GenDaBot',
 			desc: 'model trained on ~100,000 tweets to predict the gender of the author',
-			link: 'https://drive.google.com/file/d/1RiSLn5NpKlgGKRfogq2RFSQl14jVAaX4/view',
+			link: 'https://github.com/BeanyZoldyck/GenDaBot/',
 			info: ''
 		},
 		{
