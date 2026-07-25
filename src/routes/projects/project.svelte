@@ -1,7 +1,8 @@
 <script>
 	let { project} = $props();
 </script>
-<a href={project.link} target="_blank" class="">
+<a href={project.link} target="" id={project.title.replaceAll(' ','')
+} >
 <div class="border border-purple-900 p-6 transition-colors hover:border-purple-700 my-4">
 	<h2 class="mb-2 text-2xl font-bold text-purple-200">{project.title}</h2>
 	<p class="mb-2 text-purple-400">

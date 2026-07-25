@@ -77,10 +77,11 @@
   const count = (item, arr) => arr.filter(it => it === item).length;
   let skills: Array<string> = $state([]);
   const updateSkills = () => {
+
+    const tempSkill = document.getElementById('tempskill').textContent;
     filtered = [];
-  const tempSkill = document.getElementById('tempskill').textContent;
-  if  (skills.includes(tempSkill)) remove(tempSkill, skills);
-  else {
+    if (skills.includes(tempSkill)) remove(tempSkill, skills);
+    else {
       if (tempSkill) skills.push(tempSkill);
     }
     for (const pj of projects) {
@@ -90,15 +91,6 @@
       filtered.push(pj);
     }
 
-    // for (const fpj of filtered) {
-    //   for (const sk of skills) {
-    //    if (!fpj.skills.split(' ').includes(sk)) remove(fpj, filtered);
-    //   }
-    // }
-    //
-    // filtered = filtered.filter((item, pos) => {return filtered.indexOf(item) == pos})
-    //
-    console.log(filtered, skills)
   }
 
 	let filtered: Array<Pjct> = $state([]);
@@ -121,4 +113,5 @@
 {/if}
 	</div>
 <p id='tempskill' class='text-black w-0 h-0'>{skills}</p>
+<p id='clicked' class='text-black w-0 h-0'>0</p>
 </section>
