@@ -73,29 +73,43 @@
 		}, 
 
 	];
+  const remove = (item, array) => {array.length > 1 ? array.splice(array.indexOf(item), 1): array = []}
   let skills: Array<string> = $state([]);
   const updateSkills = () => {
+    filtered = [];
   const tempSkill = document.getElementById('tempskill').textContent;
-  if  (  skills.includes(tempSkill)){
-      skills.length > 1 ? skills = skills.splice(tempSkill.indexOf(tempSkill), 1) : skills = [];
-    }
+  if  (skills.includes(tempSkill)) remove(tempSkill, skills);
   else {
-      skills.push(tempSkill);
-      
+      if (tempSkill) skills.push(tempSkill);
     }
-  if ((document.getElementById("skillbank")) && (document.getElementById("skillbank").textContent != '')){
+    for (const pj of projects) {
+      pj.skills.split(' ').forEach(sk => {if (sk && skills.includes(sk)) filtered.push(pj) });
     }
+
+    for (const pj of projects) {
+      pj.skills.split(' ').forEach(sk => {if (sk && skills.includes(sk)) filtered.push(pj) });
+    }
+    console.log(filtered)
   }
+
+	let filtered: Array<Pjct> = $state([]);
+
 </script>
 <section class="py-20">
   <div class="grid grid-cols-2">
 <h1 class="mb-8 text-4xl font-bold text-purple-300">projects</h1>
-<p id='skillbank' class='text-white'>{#if (skills.length > 0)}filters: {/if}{' '+skills.join(', ')}</p>
+<p id='skillbank' onclick={()=>{skills = []; filtered = []}} class='text-white'>{#if (skills.length > 0)}filters: {/if}{' '+skills.join(', ')}</p>
 </div>
 	<div class="space-y-8" onclick={updateSkills}>
+    {#if (skills.length == 0)}
 		{#each projects.sort(() => Math.random() - 0.5) as project}
 			<Project {project} ></Project>
 		{/each}
+    {:else}
+		{#each filtered as project}
+			<Project {project} ></Project>
+		{/each}
+{/if}
 	</div>
 <p id='tempskill' class='text-black w-0 h-0'>{skills}</p>
 </section>
