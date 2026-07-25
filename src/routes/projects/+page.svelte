@@ -85,7 +85,7 @@
     }
     for (const pj of projects) {
       // pj.skills.split(' ').forEach(sk => {if (sk && skills.includes(sk) && !filtered.includes(pj)) filtered.push(pj) });
-      if (!pj.skills.split(' ').filter((sk)=>{return skills.includes(sk)}).length == skills.length) continue;
+      if (!(pj.skills.split(' ').filter((sk)=>{return skills.includes(sk)}).length == skills.length)) continue;
       if (filtered.filter(fpj => {return fpj.title == pj.title }).length > 0) continue;
       filtered.push(pj);
     }
