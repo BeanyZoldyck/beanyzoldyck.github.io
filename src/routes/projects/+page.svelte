@@ -13,7 +13,7 @@
 			desc: 'Neural network written with no libraries in C++ aiming to distill stockfish',
 			link: 'https://github.com/BeanyZoldyck/stockbear/tree/main?tab=readme-ov-file',
 			info: 'this project got a B',
-      skills: 'ai from-scratch'
+      skills: 'ai scratch'
 		},
 		{
 			title: 'Obfuscryption',
@@ -36,7 +36,7 @@
 			desc: 'machine Learning library made with no libraries in python. example predicts gender of input name',
 			link: 'https://github.com/BeanyZoldyck/NameBot',
 			info: '',
-      skills: 'ai from-scratch NLP'
+      skills: 'ai scratch NLP'
 
 		},
 		{
@@ -52,7 +52,7 @@
 			desc: 'transformer architecture in C ',
 			link: 'https://github.com/BeanyZoldyck/llm.c',
 			info: 'WIP, currently implementing backpropagation',
-      skills: 'ai NLP LLMs from-scratch'
+      skills: 'ai NLP LLMs scratch'
 
 		}, 
 		{
@@ -73,7 +73,10 @@
 		}, 
 
 	];
-  let skills: Array<string> = [];
+  let skills: Array<string> = $state([]);
+  $effect(()=>{
+    console.log(skills)
+  })
 </script>
 
 <section class="py-20">
@@ -81,7 +84,7 @@
 
 	<div class="space-y-8">
 		{#each projects.sort(() => Math.random() - 0.5) as project}
-			<Project {project}></Project>
+			<Project {project} {skills}></Project>
 		{/each}
 	</div>
 </section>
