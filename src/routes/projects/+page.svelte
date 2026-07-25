@@ -73,7 +73,8 @@
 		}, 
 
 	];
-  const remove = (item, array) => {array.length > 1 ? array.splice(array.indexOf(item), 1): array = []}
+  const remove = (item, array) => {array.length > 1 ? array.splice(array.indexOf(item), 1) : array.pop(); }
+  const count = (item, arr) => arr.filter(it => it === item).length;
   let skills: Array<string> = $state([]);
   const updateSkills = () => {
     filtered = [];
@@ -83,13 +84,21 @@
       if (tempSkill) skills.push(tempSkill);
     }
     for (const pj of projects) {
-      pj.skills.split(' ').forEach(sk => {if (sk && skills.includes(sk)) filtered.push(pj) });
+      // pj.skills.split(' ').forEach(sk => {if (sk && skills.includes(sk) && !filtered.includes(pj)) filtered.push(pj) });
+      if (!pj.skills.split(' ').filter((sk)=>{return skills.includes(sk)}).length == skills.length) continue;
+      if (filtered.filter(fpj => {return fpj.title == pj.title }).length > 0) continue;
+      filtered.push(pj);
     }
 
-    for (const pj of projects) {
-      pj.skills.split(' ').forEach(sk => {if (sk && skills.includes(sk)) filtered.push(pj) });
-    }
-    console.log(filtered)
+    // for (const fpj of filtered) {
+    //   for (const sk of skills) {
+    //    if (!fpj.skills.split(' ').includes(sk)) remove(fpj, filtered);
+    //   }
+    // }
+    //
+    // filtered = filtered.filter((item, pos) => {return filtered.indexOf(item) == pos})
+    //
+    console.log(filtered, skills)
   }
 
 	let filtered: Array<Pjct> = $state([]);
