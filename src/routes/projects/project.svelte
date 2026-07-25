@@ -1,5 +1,6 @@
 <script>
 	let { project, skills } = $props();
+  let index = 0;
 </script>
 <a href={project.link} target="_blank" class="">
 <div class="border border-purple-900 p-6 transition-colors hover:border-purple-700 my-4">
@@ -7,11 +8,11 @@
 	<p class="mb-2 text-purple-400">
 		{project.desc}
 	</p>
-	<p class="mb-0 text-xs text-mauve-500">{project.info}</p>
+	<p class="mb-0 text-xs text-mauve-500" id='text'>{project.info}</p>
 	{project.title}
 <div class=" transition-colors z-10 text-purple-100 grid w-100 grid-cols-4 py-1 space-x-4 text-xs">
-  {#each project.skills.split(' ').sort(() => Math.random() - 0.5) as skill}
-<a href="" target="" class="" onclick={()=>{console.log("didn't open!")}}>
+  {#each project.skills.split(' ') as skill}
+<a href="" target="" class={skill} onclick={()=>{console.log(skill)}}>
 <div class="border border-purple-900 p-3 hover:border-purple-300">{skill}</div>
 </a>
   {/each}
