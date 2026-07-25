@@ -1,6 +1,5 @@
 <script>
-	let { project, skills } = $props();
-  let index = 0;
+	let { project} = $props();
 </script>
 <a href={project.link} target="_blank" class="">
 <div class="border border-purple-900 p-6 transition-colors hover:border-purple-700 my-4">
@@ -12,7 +11,8 @@
 	{project.title}
 <div class=" transition-colors z-10 text-purple-100 grid w-100 grid-cols-4 py-1 space-x-4 text-xs">
   {#each project.skills.split(' ') as skill}
-<a href="" target="" class={skill} onclick={()=>{console.log(skill)}}>
+<a href="" target="" class='' onclick={()=>{document.getElementById("tempskill").textContent = skill }}>
+
 <div class="border border-purple-900 p-3 hover:border-purple-300">{skill}</div>
 </a>
   {/each}

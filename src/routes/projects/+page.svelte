@@ -74,17 +74,28 @@
 
 	];
   let skills: Array<string> = $state([]);
-  $effect(()=>{
-    console.log(skills)
-  })
+  const updateSkills = () => {
+  const tempSkill = document.getElementById('tempskill').textContent;
+  if  (  skills.includes(tempSkill)){
+      skills.length > 1 ? skills = skills.splice(tempSkill.indexOf(tempSkill), 1) : skills = [];
+    }
+  else {
+      skills.push(tempSkill);
+      
+    }
+  if ((document.getElementById("skillbank")) && (document.getElementById("skillbank").textContent != '')){
+    }
+  }
 </script>
-
 <section class="py-20">
-	<h1 class="mb-8 text-4xl font-bold text-purple-300">projects</h1>
-
-	<div class="space-y-8">
+  <div class="grid grid-cols-2">
+<h1 class="mb-8 text-4xl font-bold text-purple-300">projects</h1>
+<p id='skillbank' class='text-white'>{#if (skills.length > 0)}filters: {/if}{' '+skills.join(', ')}</p>
+</div>
+	<div class="space-y-8" onclick={updateSkills}>
 		{#each projects.sort(() => Math.random() - 0.5) as project}
-			<Project {project} {skills}></Project>
+			<Project {project} ></Project>
 		{/each}
 	</div>
+<p id='tempskill' class='text-black w-0 h-0'>{skills}</p>
 </section>
