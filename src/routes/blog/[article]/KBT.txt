@@ -1,0 +1,25 @@
+I was passively scrolling X in the hopes of magically growing my tech accont when I came across (this post). In the post the idea of stack overflow for agents is facetiously proposed, given as a "unicorn idea".\n
+While I don't think the idea has *that* much merit, I definitely saw some value in there and internalized it. As luck would have it, I was able to realize this idea a few days later at the insforge hackathon in SF. Because I'm goated, you already know it had a shiest ass name, Snippet, that paralleled its efficacy. I was almost scared to talk about the principles behind this topic, because I was worried about someone stealing my next SaaS idea, but I quickly realized no one actually reads this blog so I might as well anyways. \n
+The inspiration is simple. Agents are expensive. With bloated harnesses, agentic loops, and hallucinations still occurring in frontier models, it's a wonder that tokens are still subsidized. However, if you were to breakdown the workload of the aveage agent, you would end up find a lot of repeated tasks. \n \n
+\n
+For example, let's say you are the typical slop merchant of today. You want to release a profitable version of one of your side projects that locates runclubs so you can bike mog them. What is the most efficient way to go about this? \n
+If you're the unenlightened, your options look something like this: \n
+\n
+1. Reprompt Kimi K3 (or Claude Fable 5 if your trash can is hard to find) on max thinking to make sure you don't miss a single detail while making "Tinder for Runclubs"\n\n
+\n
+2. Point your agent at your old project, and tell it what changes you want made\n\n
+\n
+3. Copy the project yourself and *manually* change the variables, naming, and branding to the target project to make sur--yea I'm just kidding\n\n
+\n
+There are express problems between 1 and 2. In 1, you are wasting reasoning tokens relearning lessons that were prompted away ages ago. Option 2 is still not as optimal as possible, since the agent is crawling the entire codebase, learning too much about the old project, given that the task is to make a different one. We are spoiled by generous coding plans and massive context windows to the point that we never check our agent's reasoning trace and see how many useless "thoughts" they generate. \n
+\n
+My solution to this was a lot more generalizable to problems besides one shotting React slop. The idea was that Snippet was a tool that would refer to modular, documented code that agents would not have to generate from scratch. Before I go into some intricacies that make this useful, let me mention some of the benefits behind an idea like this:\n
+\n
+1. Massively bolster lower parameter models.\n
+- Research implies that SOTA low parameter models do not have much larger knowledge gaps than intelligence compared to their monolith peers. A tool to give them access to more knowledge could make your gemma-24b-e4b-abliterated-Q_4_M.safetensors compete with GPT 5.6 Sol (in theory)\n\n
+
+2. Reduce token spend of frontier models\n
+- The original goal for this is achieved more than satisfactorily. During my testing of the snippet tooling I made, I saw a token spend decrease of 33% for the same benchmark task of fixing a broken pandas CSV import (~4k output tokens with snippet, ~5k output tokens on the agent without. reasoning trace). Though that maybe a small example, this would add up over the time of a payment cycle, especially if you're paying API pricing.\n\n
+
+3. 
+

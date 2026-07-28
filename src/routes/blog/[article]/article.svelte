@@ -3,6 +3,7 @@
 	let content = $state('');
 	import site from './site.txt?raw';
 	import SF from './SF.txt?raw';
+	import KBT from './KBT.txt?raw';
 	import bearhacks from './bearhacks.txt?raw';
 	const { article } = $props();
 	// svelte-ignore state_referenced_locally
@@ -15,6 +16,9 @@
 			content = SF;
 			break;
 
+		case 'KBT':
+			content = KBT;
+			break;
 		case 'bearhacks':
 			content = bearhacks;
 			break;

@@ -24,7 +24,12 @@
 			title: 'first time in San Francisco',
 			desc: 'first of many hopefully',
 			link: 'SF'
-		}
+		},
+		{
+			title: 'An intro to knowledge based tooling',
+			desc: 'A shiest alternative to websearch',
+			link: 'KBT'
+		},
 	];
 </script>
 
