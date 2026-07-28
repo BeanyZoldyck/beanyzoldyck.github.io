@@ -16,10 +16,16 @@ There are express problems between 1 and 2. In 1, you are wasting reasoning toke
 My solution to this was a lot more generalizable to problems besides one shotting React slop. The idea was that Snippet was a tool that would refer to modular, documented code that agents would not have to generate from scratch. Before I go into some intricacies that make this useful, let me mention some of the benefits behind an idea like this:\n
 \n
 1. Massively bolster lower parameter models.\n
-- Research implies that SOTA low parameter models do not have much larger knowledge gaps than intelligence compared to their monolith peers. A tool to give them access to more knowledge could make your gemma-24b-e4b-abliterated-Q_4_M.safetensors compete with GPT 5.6 Sol (in theory)\n\n
+- Research implies that SOTA low parameter models have much larger intelligence gaps than knowledge compared to their monolith peers. A tool that gives them access to a relevant knowledge base could make your gemma-24b-e4b-heretic-Q_4_M.safetensors compete with GPT 5.6 Sol (in theory)\n\n
 
 2. Reduce token spend of frontier models\n
-- The original goal for this is achieved more than satisfactorily. During my testing of the snippet tooling I made, I saw a token spend decrease of 33% for the same benchmark task of fixing a broken pandas CSV import (~4k output tokens with snippet, ~5k output tokens on the agent without. reasoning trace). Though that maybe a small example, this would add up over the time of a payment cycle, especially if you're paying API pricing.\n\n
+- The original goal for this is achieved more than satisfactorily. During my testing of the snippet tooling I made, I saw a token spend decrease of 33% for the same benchmark task of fixing a broken pandas CSV import with GT 5.5 with opencode (~4k output tokens with snippet, ~5k output tokens on the agent without. reasoning trace). Though that maybe a small example, this would add up over the time of a payment cycle, especially if you're paying API pricing.\n\n
 
-3. 
+3. Faster one shots\n
+- While a lot of simple proof of concepts can be one shotted, when you try to make more involved apps you need to get a lot more involved. Because a lot of the times, LLMs are chatting shit. They reinvent the wheel, and spend a lot of time reasoning through the steps of a problem that is already solved. With something like this, an agent can fetch the consensus answer and move on with the task at hand.\n\n
 
+4. Greater accuracy\n
+- Imagine if you have a preferred stack without much agent integration (as in, you have to manually approve some things on a dashboard as a human). Making new apps in these frameworks is a nightmare. There are a plethora of deprecations, edge cases, and runtime errors that the agent just wouldn't be aware of dude to their knowledge cutoff hallucinations. This is very well my life as I willingly choose to use firebase due to how cheap it is. A fleshed out KBT platform could allow me to save all the errors I have ran into for the type of apps I make, and have my agents never make those mistakes again.\n\n
+
+5. Cheaper than web fetch\n
+- As other agent-conscious reddit users have pointed out, webfetch is expensive. Most of the results the agent gets back will be irrelevant, or worse: misleading. The only proposed solution I've seen on Reddit, which is the amalgamate of humanity's applicable knowledge, is to use cheaper websearch tooling... KBT solves this by using vector embeddings (Cosine similarity instead of RAG) to fetch only relevant results thus not polluting your context window
