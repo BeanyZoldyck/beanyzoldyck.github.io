@@ -63,7 +63,7 @@
 			<p class="mb-2 text-lg text-purple-400">feel free to reach out:</p>
 			<Contact
 				contact={{
-					link: 'https://beanyzoldyck.github.io/email',//wait I'm hilarious
+					link: '/email',//wait I'm hilarious
 					name: 'email',
 					svg: `<svg
 					fill="none"

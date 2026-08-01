@@ -27,7 +27,7 @@
 		},
 		{
 			title: 'An intro to knowledge based tooling',
-			desc: 'A shiest alternative to websearch',
+			desc: 'WIP',
 			link: 'KBT'
 		},
 	];
