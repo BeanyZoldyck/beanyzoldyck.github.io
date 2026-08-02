@@ -1,5 +1,6 @@
 <script>
 	import Contact from './contact.svelte';
+	import { resolve } from '$app/paths';
 	const contacts = [
 		{
 			name: 'github',
@@ -63,7 +64,7 @@
 			<p class="mb-2 text-lg text-purple-400">feel free to reach out:</p>
 			<Contact
 				contact={{
-					link: '/email',//wait I'm hilarious
+					link: {resolve('/email')},//wait I'm hilarious
 					name: 'email',
 					svg: `<svg
 					fill="none"
