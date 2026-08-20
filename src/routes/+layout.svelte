@@ -10,7 +10,7 @@
 
 <header class="border-b border-purple-900 bg-black py-4">
 	<nav class="mx-auto flex max-w-4xl items-center justify-between px-2 md:px-6">
-		<a href={resolve('/')} class="text-white pl-2">~/home</a>
+		<a href={resolve('/')} class="text-white pl-2">home</a>
 		<div class="flex gap-3 md:gap-6">
 			<a href={resolve('/about')} class="text-purple-300 hover:text-purple-200">about</a>
 			<a href={resolve('/projects')} class="text-purple-300 hover:text-purple-200">projects</a>
