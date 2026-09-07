@@ -14,21 +14,18 @@
 			link: 'site',
 			title: 'personal site',
 			header: 'took me long enough',
-			created: 1772583770851,
 			edited: 1772718227084
 		},
 		{
 			link: 'bearhacks',
 			title: 'chuka - caffeine = fraud?',
 			header: 'hype moments and aura was not enough to bring back a win',
-			created: 1778300412388,
 			edited: 1784272609000,
       },
 		{
 			link: 'SF',
 			title: 'fist time in SF',
 			header: 'got citymogged so hard I wrote this on the flight back',
-			created: 1780889081910,
 			edited: 1780889081910
 		},
 
@@ -36,7 +33,6 @@
 			link: 'KBT',
 			title: 'knowledge based tooling',
 			header: 'we DONE with RAG',
-			created: 1785214125799,
 			edited: 1785214125799
 		},
 	];

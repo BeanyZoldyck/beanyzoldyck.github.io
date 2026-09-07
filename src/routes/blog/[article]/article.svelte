@@ -43,17 +43,9 @@
 
 	<div class="space-y-6">
 		<div class="inline-flex">
-			<p class="border-l-2 pl-3 text-xs text-mauve-500">
-				<button
-					class="cursor-pointer"
-					onclick={() => {
-						showTime(article.created);
-					}}
-				>
-					created {showDate(article.created)}</button
-				>
+			<p class="border-l-2 pl-1 text-xs text-mauve-500">
 			</p>
-			<p class="tooltip ml-3 border-l-2 pl-3 text-xs text-mauve-500">
+			<p class="tooltip ml-1 pl-3 text-xs text-mauve-500">
 				<button
 					class="cursor-pointer"
 					onclick={() => {

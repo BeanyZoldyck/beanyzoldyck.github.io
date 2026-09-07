@@ -11,24 +11,31 @@
 		{
 			title: 'finally got around to making a personal site',
 			desc: 'dont know how someone with an ego my size took this long',
-			link: 'site'
+			link: 'site',
+			created: 1772583770851,
 		},
 
 		{
 			title: 'BearHacks 2026',
 			desc: 'first hackathon loss of 2026...',
-			link: 'bearhacks'
+			link: 'bearhacks',
+			created: 1778300412388,
+
 		},
 
 		{
 			title: 'first time in San Francisco',
 			desc: 'first of many hopefully',
-			link: 'SF'
+			link: 'SF',
+			created: 1780889081910,
+
 		},
 		{
 			title: 'An intro to knowledge based tooling',
 			desc: 'WIP',
-			link: 'KBT'
+			link: 'KBT',
+			created: 1785214125799,
+
 		},
 	];
 </script>
