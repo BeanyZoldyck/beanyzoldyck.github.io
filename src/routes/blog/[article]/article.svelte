@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
+	import { resolve, asset } from '$app/paths';
 	let content = $state('');
 	import site from './site.txt?raw';
 	import SF from './SF.txt?raw';
@@ -58,13 +58,13 @@
 			<p class="text-lg text-purple-600">{article.header}</p>
 		</div>
 		{#each content.split('\\n') as paragraph}
-      {#if !paragraph.startsWith("\\img",1)}
-			<p class="text-white">{paragraph}</p>
-      {:else}
+      {#if paragraph.startsWith("\\img",1)}
         <a href={paragraph.split(';')[3]} target="_blank">
-        <img src={`/pics/${paragraph.split(';')[1]}`} alt={paragraph.split(';')[2]} />
+        <img src={asset(`/pics/${paragraph.split(';')[1]}`)} alt={paragraph.split(';')[2]} />
 </a>
         <br>
+      {:else}
+			<p class="text-white">{paragraph}</p>
       {/if}
 		{/each}
 	</div>

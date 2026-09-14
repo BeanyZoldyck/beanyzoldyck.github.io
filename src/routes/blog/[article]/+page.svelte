@@ -33,8 +33,7 @@
 			link: 'KBT',
 			title: 'knowledge based tooling',
 			header: 'we DONE with RAG',
-			edited: 1785214125799
-		},
+			edited: 1789420745010},
 	];
 	function getArticle(ref: string): ArticleData {
 		for (const article of articles) {
