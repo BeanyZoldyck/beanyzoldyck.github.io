@@ -61,9 +61,10 @@
       {#if !paragraph.startsWith("\\img",1)}
 			<p class="text-white">{paragraph}</p>
       {:else}
-        <a href={paragraph.split(';')[3]}>
+        <a href={paragraph.split(';')[3]} target="_blank">
         <img src={`/pics/${paragraph.split(';')[1]}`} alt={paragraph.split(';')[2]} />
 </a>
+        <br>
       {/if}
 		{/each}
 	</div>

@@ -30,7 +30,8 @@ My solution to this was a lot more generalizable to problems besides one shottin
 5. Cheaper than web fetch\n
 \img;kbt1.png;Post describing ChatGPT web search usage;https://www.reddit.com/r/ChatGPT/s/eEVNciHbSL
 \n
-https://www.reddit.com/r/ClaudeCode/s/tscymKXGRF\n
+\img;kbt2.png;Post describing Claude Code consuming more usage when Opus ran websearch and ignored cache;https://www.reddit.com/r/ClaudeCode/s/tscymKXGRF
+\n
 - As other agent-conscious reddit users have pointed out, webfetch is expensive. Most of the results the agent gets back will be irrelevant, or worse: misleading. The only proposed solution I've seen on Reddit, which is the amalgamate of humanity's applicable knowledge, is to use cheaper websearch tooling... KBT solves this by using vector embeddings (cosine similarity, similar to RAG) to fetch only relevant results thus not polluting your context window\n
 \n
 6. More efficient than finetuning, works with larger datasets than CAG\n
