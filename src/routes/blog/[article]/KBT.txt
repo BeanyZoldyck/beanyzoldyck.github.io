@@ -28,7 +28,8 @@ My solution to this was a lot more generalizable to problems besides one shottin
 - This significantly reduces the odds of hallucinations due to reliance on deprecated or poorly documented APIs. Imagine if you have a preferred stack without much agent integration (as in, you have to manually approve things on a dashboard). Making new apps in these frameworks tends to be a nightmare. There are a plethora of deprecations, edge cases, and runtime errors that the agent just wouldn't be aware of due to their knowledge cutoff hallucinations. This is my life as I mainly use firebase due to how cheap it is. A fleshed out KBT platform could allow me to save all the errors I have ran into for the type of apps I make, and have my agents never make those mistakes again.\n\n
 \n
 5. Cheaper than web fetch\n
-https://www.reddit.com/r/ChatGPT/s/eEVNciHbSL\n
+\img;kbt1.png;Post describing ChatGPT web search usage;https://www.reddit.com/r/ChatGPT/s/eEVNciHbSL
+\n
 https://www.reddit.com/r/ClaudeCode/s/tscymKXGRF\n
 - As other agent-conscious reddit users have pointed out, webfetch is expensive. Most of the results the agent gets back will be irrelevant, or worse: misleading. The only proposed solution I've seen on Reddit, which is the amalgamate of humanity's applicable knowledge, is to use cheaper websearch tooling... KBT solves this by using vector embeddings (cosine similarity, similar to RAG) to fetch only relevant results thus not polluting your context window\n
 \n

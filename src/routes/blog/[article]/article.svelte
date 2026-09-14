@@ -11,11 +11,9 @@
 		case 'site':
 			content = site;
 			break;
-
 		case 'SF':
 			content = SF;
 			break;
-
 		case 'KBT':
 			content = KBT;
 			break;
@@ -60,7 +58,13 @@
 			<p class="text-lg text-purple-600">{article.header}</p>
 		</div>
 		{#each content.split('\\n') as paragraph}
+      {#if !paragraph.startsWith("\\img",1)}
 			<p class="text-white">{paragraph}</p>
+      {:else}
+        <a href={paragraph.split(';')[3]}>
+        <img src={`/pics/${paragraph.split(';')[1]}`} alt={paragraph.split(';')[2]} />
+</a>
+      {/if}
 		{/each}
 	</div>
 	<div class="mt-15 border-l-2 border-purple-900 pl-6">
