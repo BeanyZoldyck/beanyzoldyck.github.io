@@ -7,7 +7,7 @@
 		'contact',
 		'projects'
 	];
-  let intros: Array<string> = ['intermittent things doer', "*not* a frontend dev...", 'committed to the "tech hipster" bit', 'lowercase enjoyer']
+  let intros: Array<string> = ['intermittent things doer', "*not* a frontend dev...", 'committed to the "tech hipster" bit', 'lowercase enjoyer', "dont look at the site's source code it'll ruin your day"]
 </script>
 
 <section class="py-20">
