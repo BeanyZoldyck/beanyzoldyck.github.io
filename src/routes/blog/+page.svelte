@@ -31,8 +31,8 @@
 
 		},
 		{
-			title: 'An intro to knowledge based tooling',
-			desc: 'WIP',
+			title: 'knowledge based tooling',
+			desc: 'native approach to agentic efficiency',
 			link: 'KBT',
 			created: 1785214125799,
 

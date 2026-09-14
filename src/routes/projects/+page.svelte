@@ -71,6 +71,14 @@
       skills: 'CV GUI data'
 
 		}, 
+		{
+			title: 'Snippet',
+			desc: 'Tooling that makes agents faster, more efficient, and more reliable',
+			link: 'https://youtu.be/EoTkwgarx9g',
+			info: 'covered in the "Knowledge Based Tooling" blog on this site!',
+      skills: 'LLMs agents ai GUI'
+
+		}, 
 
 	];
   const remove = (item, array) => {array.length > 1 ? array.splice(array.indexOf(item), 1) : array.pop(); }

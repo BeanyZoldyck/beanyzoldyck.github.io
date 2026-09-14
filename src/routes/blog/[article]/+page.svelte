@@ -31,7 +31,7 @@
 
 		{
 			link: 'KBT',
-			title: 'knowledge based tooling',
+			title: 'intro to knowledge based tooling',
 			header: 'we DONE with RAG',
 			edited: 1789420745010,
       thumbnail: "https://i0.wp.com/the-digital-librarian.com/wp-content/uploads/2023/01/Untitled-design-3.png?fit=1200%2C628&ssl=1"
