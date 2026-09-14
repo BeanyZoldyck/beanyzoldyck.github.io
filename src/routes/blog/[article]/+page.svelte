@@ -6,8 +6,8 @@
 		link: string;
 		title: string;
 		header: string;
-		created: number;
 		edited: number;
+    thumbnail: string;
 	}
 	const articles: Array<ArticleData> = [
 		{
@@ -33,7 +33,9 @@
 			link: 'KBT',
 			title: 'knowledge based tooling',
 			header: 'we DONE with RAG',
-			edited: 1789420745010},
+			edited: 1789420745010,
+      thumbnail: "https://i0.wp.com/the-digital-librarian.com/wp-content/uploads/2023/01/Untitled-design-3.png?fit=1200%2C628&ssl=1"
+    },
 	];
 	function getArticle(ref: string): ArticleData {
 		for (const article of articles) {

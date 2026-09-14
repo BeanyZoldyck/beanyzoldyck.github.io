@@ -36,6 +36,20 @@
 	}
 </script>
 
+<svelte:head>
+  <!-- Basic Open Graph Tags for Discord & Twitter -->
+  <meta property="og:title" content={article.title} />
+  <meta property="og:description" content={article.header} />
+  <meta property="og:image" content={article.thumbnail} />
+  <meta property="og:url" content="https://chukaze.dev" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="chukaze.dev" />
+  <meta name="twitter:description" content="Personal site" />
+  <meta name="twitter:image" content="https://chukaze.dev" />
+</svelte:head>
 <section class="py-20">
 	<h1 class="mb-8 text-4xl font-bold text-purple-300">{article.title}</h1>
 
