@@ -64,8 +64,8 @@
 			<p class="mb-2 text-lg text-purple-400">feel free to reach out:</p>
 			<Contact
 				contact={{
-					link: {resolve('/email')},//wait I'm hilarious
 					name: 'email',
+					link: resolve('/email'),
 					svg: `<svg
 					fill="none"
 					stroke="currentColor"
