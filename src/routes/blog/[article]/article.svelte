@@ -34,6 +34,9 @@
 	function showTime(time: number) {
 		alert('In your time: ' + new Date(time).toLocaleString());
 	}
+  function lineStartsWith(str: string, head: string){
+return str.startsWith(head,1) || str.startsWith(head,0)
+  }
 </script>
 
 <svelte:head>
@@ -72,12 +75,18 @@
 			<p class="text-lg text-purple-600">{article.header}</p>
 		</div>
 		{#each content.split('\\n') as paragraph}
-      {#if paragraph.startsWith("\\img",1)}
+      {#if (lineStartsWith(paragraph, "\\img"))}
         <a href={paragraph.split(';')[3]} target="_blank">
         <img src={asset(`/pics/${paragraph.split(';')[1]}`)} alt={paragraph.split(';')[2]} />
-</a>
+        </a>
         <br>
-      {:else}
+		{:else if paragraph.includes('\\a')}
+<p class="text-white">
+      {#each paragraph.split('\\a') as block, ind}
+         {ind == 0 ? paragraph.split(";")[0].substring(0, paragraph.split(";")[0].length -3) : ''} <a class="text-purple-500" href={block.split(';')[2]+console.log(ind == 1 ? paragraph.split(";")[0].substring(0, paragraph.split(";")[0].length - 3) : '')} target="_blank">{block.split(';')[1]}</a>
+        {block.split(';')[3]}
+      {/each}</p>
+        {:else}
 			<p class="text-white">{paragraph}</p>
       {/if}
 		{/each}

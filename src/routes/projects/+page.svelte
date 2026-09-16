@@ -11,7 +11,7 @@
 		{
 			title: 'Stockbear',
 			desc: 'Neural network written with no libraries in C++ aiming to distill stockfish',
-			link: 'https://github.com/BeanyZoldyck/stockbear/tree/main?tab=readme-ov-file',
+			link: 'https://github.com/BeanyZoldyck/stockbear/blob/main/fp_namelesss.pdf',
 			info: 'this project got a B',
       skills: 'ai scratch'
 		},
@@ -34,7 +34,7 @@
 		{
 			title: 'NameBot',
 			desc: 'machine Learning library made with no libraries in python. example predicts gender of input name',
-			link: 'https://github.com/BeanyZoldyck/NameBot',
+			link: 'https://github.com/BeanyZoldyck/NameBot/blob/main/NameBot_demo.ipynb',
 			info: '',
       skills: 'ai scratch NLP'
 
