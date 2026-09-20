@@ -27,6 +27,17 @@
 
 		<div class="border-l-2 border-purple-700 pl-6">
 			<p class="text-lg text-purple-400">
+				I am currently employed at <a
+					href="https://magichour.ai"
+					class="text-purple-700"
+					target="_blank"
+				>
+					Magic Hour</a
+				>, where I am having a blast working on AI video pipelines!
+			</p>
+		</div>
+		<div class="border-l-2 border-purple-700 pl-6">
+			<p class="text-lg text-purple-400">
 				my hobbies include <a
 					href="https://youtube.com/shorts/H70yENQtb2w"
 					class="text-purple-700"
