@@ -64,8 +64,8 @@
 					>deepseek v4</a
 				>, <a href="https://openai.com/index/introducing-gpt-5-3-codex/" class="text-purple-700" target="_blank"
 					>gpt 5.6 sol</a
-				>, and <a href="https://deepmind.google/models/gemma/gemma-4/" class="text-purple-700" target="_blank"
-					>gemma4</a
+				>, and <a href="https://huggingface.co/Qwen/Qwen3.8-27B" class="text-purple-700" target="_blank"
+					>qwen3.8</a
 				>.			</p>
 		</div>
 		<h2 class="mt-12 mb-6 text-2xl font-bold text-purple-300">passions</h2>
