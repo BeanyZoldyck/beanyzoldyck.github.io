@@ -4,6 +4,7 @@
 	import site from './site.txt?raw';
 	import SF from './SF.txt?raw';
 	import KBT from './KBT.txt?raw';
+	import EE from './EE.txt?raw';
 	import bearhacks from './bearhacks.txt?raw';
 	const { article } = $props();
 	// svelte-ignore state_referenced_locally
@@ -13,6 +14,9 @@
 			break;
 		case 'SF':
 			content = SF;
+			break;
+		case 'EE':
+			content = EE;
 			break;
 		case 'KBT':
 			content = KBT;
@@ -86,8 +90,10 @@ return str.startsWith(head,1) || str.startsWith(head,0)
          {ind == 0 ? paragraph.split(";")[0].substring(0, paragraph.split(";")[0].length -3) : ''} <a class="text-purple-500" href={block.split(';')[2]+console.log(ind == 1 ? paragraph.split(";")[0].substring(0, paragraph.split(";")[0].length - 3) : '')} target="_blank">{block.split(';')[1]}</a>
         {block.split(';')[3]}
       {/each}</p>
-        {:else}
-			<p class="text-white">{paragraph}</p>
+      {:else if (lineStartsWith(paragraph, "\\br"))}
+      <hr class="border-t border-purple-800 my-12">
+    {:else}
+			<p class="text-white break-words">{paragraph}</p>
       {/if}
 		{/each}
 	</div>

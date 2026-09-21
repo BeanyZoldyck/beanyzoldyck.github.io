@@ -33,7 +33,7 @@
 					target="_blank"
 				>
 					Magic Hour</a
-				>, where I am having a blast working on AI video pipelines!
+				>, where I am having a blast working on out AI UGC tooling!
 			</p>
 		</div>
 		<div class="border-l-2 border-purple-700 pl-6">

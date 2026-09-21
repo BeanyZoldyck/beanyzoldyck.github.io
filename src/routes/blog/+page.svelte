@@ -37,6 +37,14 @@
 			created: 1785214125799,
 
 		},
+    {
+			title: 'ezeoke encryption',
+			desc: 'where non-determinism meets encryption',
+			link: 'EE',
+			created: 1789932337143,
+
+		}
+
 	];
 </script>
 

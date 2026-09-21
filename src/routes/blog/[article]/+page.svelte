@@ -28,13 +28,20 @@
 			header: 'got citymogged so hard I wrote this on the flight back',
 			edited: 1780889081910
 		},
-
 		{
 			link: 'KBT',
 			title: 'intro to knowledge based tooling',
 			header: 'we DONE with RAG',
 			edited: 1789420745010,
       thumbnail: "https://i0.wp.com/the-digital-librarian.com/wp-content/uploads/2023/01/Untitled-design-3.png?fit=1200%2C628&ssl=1"
+    },
+		{
+			link: 'EE',
+			title: 'ezeoke encryption',
+			header: 'synopsis of a peculiar encryption algorithm I made about 7 years ago.',
+			edited: 1789932765704,
+      thumbnail: ""
+
     },
 	];
 	function getArticle(ref: string): ArticleData {
