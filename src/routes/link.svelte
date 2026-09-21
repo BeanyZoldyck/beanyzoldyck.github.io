@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	export let thing: 'about' | 'blog' | 'contact' | 'projects';
+	export let thing: 'about' | 'blog' | 'contact' | 'projects' | 'demos';
 </script>
 
 <a

@@ -16,6 +16,7 @@
 			<a href={resolve('/projects')} class="text-purple-300 hover:text-purple-200">projects</a>
 			<a href={resolve('/contact')} class="text-purple-300 hover:text-purple-200">contact</a>
 			<a href={resolve('/blog')} class="text-purple-300 hover:text-purple-200">blog</a>
+			<a href={resolve('/demos')} class="text-purple-300 hover:text-purple-200">demos</a>
 		</div>
 	</nav>
 </header>

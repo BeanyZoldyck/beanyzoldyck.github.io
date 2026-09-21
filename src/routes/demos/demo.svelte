@@ -18,12 +18,11 @@
 	href={resolve(`/demos/${demo.link}/`)}
 	class="block border border-purple-900 p-6 transition-colors hover:border-purple-700"
 >
-	<h2 class="mb-2 text-2xl font-bold text-purple-200">{demo.title}</h2>
+	<h2 class="mb-2 text-2xl font-bold text-purple-200">{demo.name}</h2>
 	<p class="mb-2 text-purple-400">
 		{demo.desc}
 	</p>
 	<span class="text-purple-700 hover:border-purple-500">
 
-					created {showDate(0)}
   </span>
 </a>
