@@ -7,20 +7,23 @@
 	let seed = $state(Number.parseInt(Math.abs(Math.random())*2**64).toString(16));
 	let counter = $state(0);
 	let cipher = $state('');
+	let errorText = $state('');
   let encrypt = $state(true);
   function updateCipher() {
       cipher = encode(seed, counter, text).ciphertext
   }
   function updateText() {
       text = decode(seed, cipher)
-    try {
-    } catch (error) {
-     text = ''; 
-    }
   }
   onMount(()=>{
       cipher = encode(seed, counter, text).ciphertext
   })
+  function handleKeyDown(event) {
+    encrypt ? updateCipher():updateText();
+    if (event.key === 'Enter') {
+      event.shiftKey ? counter--:counter++;
+    }
+  }
 </script>
 
 <button class="cursor-pointer border border-purple-700 px-6 py-3 text-purple-300 transition-colors hover:border-purple-500">
@@ -31,7 +34,7 @@
 <input
   type="text"
   bind:value={text}
-  onkeydown={updateCipher}
+  onkeydown={handleKeyDown}
   placeholder="Message to encrypt"
   class="focus;border-purple-500 w-full rounded-xl border border-gray-800 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:outline-none"
 />
@@ -47,16 +50,15 @@
 <input
   type="text"
   bind:value={seed}
-  onkeydown={encrypt ? updateCipher:updateText}
+  oninput={encrypt ? updateCipher:updateText}
   placeholder="Seed"
   class="focus;border-purple-500 rounded-xl border border-gray-800 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:outline-none"
 />
-<p class="text-white my-6">Counter: </p>
+<p class="text-white my-6">Index: </p>
 <input
   type="number"
   bind:value={counter}
-  onkeydown={encrypt ? updateCipher:updateText}
-  onchange={encrypt ? updateCipher:updateText}
+  oninput={encrypt ? updateCipher:updateText}
   placeholder="Seed"
   class="focus;border-purple-500 rounded-xl border border-gray-800 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:outline-none"
 />
@@ -66,7 +68,7 @@
 <input
   type="text"
   bind:value={cipher}
-  onkeydown={updateText}
+  oninput={updateText}
   placeholder="Encrypted message"
   class="focus;border-purple-500 w-full rounded-xl border border-gray-800 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:outline-none"
 />
