@@ -79,6 +79,14 @@
       skills: 'LLMs agents ai GUI'
 
 		}, 
+		{
+			title: 'Ezeoke Encryption',
+			desc: 'Non deterministic encryption algorithm using the Fundamental Theorem of Arithmetic and Lexicographical encoding',
+			link: 'http://chukaze.dev/demos/EE',
+			info: 'covered in the "ezeoke ecryption" blog on this site!',
+      skills: 'crypto'
+
+		}, 
 
 	];
   const remove = (item, array) => {array.length > 1 ? array.splice(array.indexOf(item), 1) : array.pop(); }

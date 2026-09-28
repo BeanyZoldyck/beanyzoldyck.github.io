@@ -86,8 +86,14 @@
   </div>
 
 <button class="cursor-pointer border border-purple-700 px-4 py-1 text-purple-300 transition-colors hover:border-purple-500" onclick={()=>{goto("/blog/EE")}}>
-	<div class="flex gap-4 col my-4 row">
+	<div class="flex gap-5 col my-4 row">
   <p class='text-white text-small border-purple-500' >Write up</p>
 <svg width="20px" height="20px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#ffffff" fill="none"><path d="M55.4,32V53.58a1.81,1.81,0,0,1-1.82,1.82H10.42A1.81,1.81,0,0,1,8.6,53.58V10.42A1.81,1.81,0,0,1,10.42,8.6H32"/><polyline points="40.32 8.6 55.4 8.6 55.4 24.18"/><line x1="19.32" y1="45.72" x2="54.61" y2="8.91"/></svg>
     </div>
+</button>
+<button class="cursor-pointer border border-purple-700 px-4 py-1 text-purple-300 transition-colors hover:border-purple-500" ><a href="https://github.com/BeanyZoldyck/obfuscryption/blob/main/obfuscrypt.py" target="_blank">
+	<div class="flex gap-5 col my-4 row">
+  <p class='text-white text-small border-purple-500' >Source</p>
+<svg width="20px" height="20px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#ffffff" fill="none"><path d="M55.4,32V53.58a1.81,1.81,0,0,1-1.82,1.82H10.42A1.81,1.81,0,0,1,8.6,53.58V10.42A1.81,1.81,0,0,1,10.42,8.6H32"/><polyline points="40.32 8.6 55.4 8.6 55.4 24.18"/><line x1="19.32" y1="45.72" x2="54.61" y2="8.91"/></svg>
+    </div></a>
 </button>
