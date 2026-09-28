@@ -87,7 +87,7 @@ return str.startsWith(head,1) || str.startsWith(head,0)
 		{:else if paragraph.includes('\\a')}
 <p class="text-white">
       {#each paragraph.split('\\a') as block, ind}
-         {ind == 0 ? paragraph.split(";")[0].substring(0, paragraph.split(";")[0].length -3) : ''} <a class="text-purple-500" href={block.split(';')[2]+console.log(ind == 1 ? paragraph.split(";")[0].substring(0, paragraph.split(";")[0].length - 3) : '')} target="_blank">{block.split(';')[1]}</a>
+         {ind == 0 ? paragraph.split(";")[0].substring(0, paragraph.split(";")[0].length -3) : ''} <a class="text-purple-500" href={block.split(';')[2]} target="_blank">{block.split(';')[1]}</a>
         {block.split(';')[3]}
       {/each}</p>
       {:else if (lineStartsWith(paragraph, "\\br"))}

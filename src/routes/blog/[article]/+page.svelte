@@ -38,7 +38,7 @@
 		{
 			link: 'EE',
 			title: 'ezeoke encryption',
-			header: 'synopsis of a peculiar encryption algorithm I made about 7 years ago.',
+			header: 'synopsis of a peculiar encryption algorithm I first made 7 years ago.',
 			edited: 1789932765704,
       thumbnail: ""
 

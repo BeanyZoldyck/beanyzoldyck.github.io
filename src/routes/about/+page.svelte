@@ -39,7 +39,7 @@
 		<div class="border-l-2 border-purple-700 pl-6">
 			<p class="text-lg text-purple-400">
 				my hobbies include <a
-					href="https://youtube.com/shorts/H70yENQtb2w"
+					href="https://x.com/chuka_ze/status/2102551076243124562?s=20"
 					class="text-purple-700"
 					target="_blank"
 				>

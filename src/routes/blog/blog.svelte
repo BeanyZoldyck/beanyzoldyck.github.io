@@ -23,7 +23,6 @@
 		{blog.desc}
 	</p>
 	<span class="text-purple-700 hover:border-purple-500">
-
 					created {showDate(blog.created)}
   </span>
 </a>
