@@ -5,13 +5,12 @@
   import {encode, decode} from "./obfuscrypt.ts"
 	import { onMount } from 'svelte';
   const getArg = (arg) => {return $page.url.searchParams.get(arg)}
-	let text = $state(getArg('text') || "test");
-	let seed = $state(getArg('seed') || Number.parseInt(Math.abs(Math.random())*2**64).toString(16));
-  console.log(getArg('seed'))
-	let counter = $state(getArg('index') || 0);
-	let cipher = $state(getArg('cipher') || '');
+  let text = $state('test');
+	let seed = $state(Number.parseInt(Math.abs(Math.random())*2**64).toString(16));
+	let counter = $state(0);
+	let cipher = $state('');
 	let errorText = $state('');
-  let encrypt = $state(getArg('decrypt') ? false : true);
+	let encrypt = $state(true);
   function updateCipher() {
       cipher = encode(seed, counter, text).ciphertext
   }
@@ -19,7 +18,12 @@
       text = decode(seed, cipher)
   }
   onMount(()=>{
-      encrypt ? updateCipher():updateText();
+	text = getArg('text');
+	seed = getArg('seed') || seed;
+	counter = getArg('index') || 0;
+	cipher = getArg('cipher') || '';
+  encrypt = getArg('decrypt') ? false : true;
+  encrypt ? updateCipher():updateText();
   })
   function handleKeyDown(event) {
     encrypt ? updateCipher():updateText();
