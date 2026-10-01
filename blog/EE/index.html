@@ -13,27 +13,27 @@
 			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link href="../../_app/immutable/entry/start.C3vDGT_4.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/DwkYrOfb.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/start.BZlQ2pIX.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/6_mTe4GK.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/Cy5nAd-J.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BdBLqDsE.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/BU8MSuUu.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CdURFK_D.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CVfAsYUW.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/C8czHjTR.js" rel="modulepreload">
-		<link href="../../_app/immutable/entry/app.BDrIIlEr.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/hQZ5Ht4Q.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.DOSsP4U4.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DnGix9df.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BnlBESuq.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/hIPtvL3h.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/oG9yL-LL.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BLhO8Zrg.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CyQH0zxS.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/0.CXtg3wRR.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/0.B8soB88N.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DGebvU2X.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/uQe-IyfP.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DRgFwExb.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/pbHM8WaG.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/6.D9MafidN.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/m4UENY1C.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Ca-XTyex.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/6.CAA_c6B8.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/B4W17V6i.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/D4heeUEx.js" rel="modulepreload">
 		<!--12qhfyh--><!----><!--udl200--><meta property="og:title" content="ezeoke encryption"/> <meta property="og:description" content="synopsis of a peculiar encryption algorithm I first made 7 years ago."/> <meta property="og:image" content=""/> <meta property="og:url" content="https://chukaze.dev"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="chukaze.dev"/> <meta name="twitter:description" content="Personal site"/> <meta name="twitter:image" content="https://chukaze.dev"/><!----><title>chukaze</title>
 		<link href="../../_app/immutable/assets/0.CWuAr5xP.css" rel="stylesheet">
@@ -66,19 +66,20 @@ Recently, though, I made some additions to the algorithm that’s solve this pro
 For one, instead of randomly generating, the triplet set Q, the two messengers share a private key that the RNG is seeded from. After sending a message you increment the seed so that the next exchange is not the same as last. </p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
 This is mediated using the message metadata. Since the ordering of the triplets doesn’t matter, we use the lexicographical ordering permutation to encode a secret message that stores this index:</p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/ee5.png" alt="ciphertext -> ascii triplet -> ordinal ranking -> lexicographical encoding -> base 6 number"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
  The meta number is the truncated SHA256 hash of the mutual seed, multiplied by the message index. Two mutual parties with the same seed can recover this index by hashing the seed, dividing the Meta number by this hash to retrieve the message index, and add that to the seed to generate the correct Q set. Note that you don't need the seed to recover this meta number, it is just derived from the ciphertext triplet ordering.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
- One more addition to this algorithm, for every 30 characters a message has, we increment the index once more and regenerate the key dictionary so that the algorithm is resistant to frequency attacks. This is all in the demo as well.</p><!--]--><!--[-1--><p class="text-white break-words"> Quite shiest, I know.</p><!--]--><!--]--></div> <div class="mt-15 border-l-2 border-purple-900 pl-6"><a class="text-lg text-purple-800" href="../../blog">← back</a></div></section><!--]--><!--]--><!----></main> <footer class="mt-12 border-t border-purple-900 py-6"><div class="mx-auto max-w-4xl px-6 text-sm text-purple-500"></div></footer><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+ One more addition to this algorithm, for every 30 characters a message has, we increment the index once more and regenerate the key dictionary so that the algorithm is resistant to frequency attacks. This is all in the demo as well.</p><!--]--><!--[-1--><p class="text-white break-words"> YkQgjUwrZCKn6F0Nqe7ruA3QwZr06Fur7KnCs24eqNCO0Neq4wxzVLf0mJHyRV1RiR8iTn8ksZEe2fE7QQvGRO2GGL
+</p><!--]--><!--]--></div> <div class="mt-15 border-l-2 border-purple-900 pl-6"><a class="text-lg text-purple-800" href="../../blog">← back</a></div></section><!--]--><!--]--><!----></main> <footer class="mt-12 border-t border-purple-900 py-6"><div class="mx-auto max-w-4xl px-6 text-sm text-purple-500"></div></footer><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_hr10wg = {
+					__sveltekit_e4299v = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.C3vDGT_4.js"),
-						import("../../_app/immutable/entry/app.BDrIIlEr.js")
+						import("../../_app/immutable/entry/start.BZlQ2pIX.js"),
+						import("../../_app/immutable/entry/app.DOSsP4U4.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
