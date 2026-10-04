@@ -70,11 +70,11 @@
 		<div class="border-l-2 border-purple-700 pl-6">
 			<p class="text-lg text-purple-400">
 				my favorite models are <a href="https://cursor.com/blog/composer-2-5" class="text-purple-700" target="_blank"
-					>composer 2.5</a
+					>glm5.3-flash</a
 				>, <a href="https://www.deepseek.com/en/" class="text-purple-700" target="_blank"
-					>deepseek v4</a
+					>deepseekv4.1 flash</a
 				>, <a href="https://openai.com/index/introducing-gpt-5-3-codex/" class="text-purple-700" target="_blank"
-					>gpt 5.6 sol</a
+					>gpt sol</a
 				>, and <a href="https://huggingface.co/Qwen/Qwen3.8-27B" class="text-purple-700" target="_blank"
 					>qwen3.8</a
 				>.			</p>

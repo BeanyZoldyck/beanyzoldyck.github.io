@@ -52,7 +52,7 @@
   {/if}
 
 
-	<div class="flex gap-4 col my-4 row">
+	<div class="md:flex gap-4 col w-4 row">
 <p class="text-white my-6">Seed (hex): </p>
 <input
   type="text"

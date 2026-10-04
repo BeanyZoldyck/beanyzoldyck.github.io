@@ -39,7 +39,7 @@
 		},
     {
 			title: 'ezeoke encryption',
-			desc: 'where non-determinism meets encryption',
+			desc: 'I posted this on reddit and got flamed',
 			link: 'EE',
 			created: 1789932337143,
 

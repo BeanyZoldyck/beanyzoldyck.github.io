@@ -10,7 +10,7 @@
 	</p>
 	<p class="mb-0 text-xs text-mauve-500" id='text'>{project.info}</p>
 	{project.title}
-<div class=" transition-colors z-10 text-purple-100 grid w-100 grid-cols-4 py-1 space-x-4 text-xs">
+<div class=" transition-colors z-10 text-purple-100 grid md:w-100 grid-cols-2 md:grid-cols-4 py-1 space-y-4 space-x-4 w-60 text-xs">
   {#each project.skills.split(' ') as skill}
 <a href="" target="" class='' onclick={()=>{document.getElementById("tempskill").textContent = skill }}>
 
