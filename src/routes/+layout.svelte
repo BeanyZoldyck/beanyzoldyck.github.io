@@ -2,6 +2,16 @@
 	import './layout.css';
 	import { resolve } from '$app/paths';
 
+  let blurbs: Array<string> = `artisinal, handwritten blogsite (no ai)
+completely handwritten website. (excluding the libraries...)
+I manually wrote this site—including that em dash
+no matrices were multiplied in the making of this site
+No AI. just me, a keyboard, and copious free time
+I want the 2 people visiting this site to know: I didn't use AI to make this (0/2 care)
+all hallucinations on this site are my own
+chukaze.dev is 99.999% promptless!
+this site was madee by 1 (me) person and zero (0) GPUs`.split('\n')
+  const output = ``
 	let { children } = $props();
 </script>
 
@@ -26,5 +36,5 @@
 </main>
 
 <footer class="mt-12 border-t border-purple-900 py-6">
-	<div class="mx-auto max-w-4xl px-6 text-sm text-purple-500"> artisinal, handwritten blogsite (no ai)</div>
+	<div class="mx-auto max-w-4xl px-6 text-sm text-purple-500"> {blurbs.sort(() => Math.random() - 0.5)[0]}</div>
 </footer>
