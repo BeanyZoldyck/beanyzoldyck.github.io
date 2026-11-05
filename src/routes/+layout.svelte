@@ -26,5 +26,5 @@
 </main>
 
 <footer class="mt-12 border-t border-purple-900 py-6">
-	<div class="mx-auto max-w-4xl px-6 text-sm text-purple-500"></div>
+	<div class="mx-auto max-w-4xl px-6 text-sm text-purple-500"> artisinal, handwritten blogsite (no ai)</div>
 </footer>
