@@ -8,7 +8,13 @@
 		'projects',
     'demos'
 	];
-  let intros: Array<string> = 'intermittent things doer;*not* a frontend dev...;committed to the "tech hipster" bit;lowercase enjoyer;dont look at the site\'s source code it\'ll ruin your day;screwed if it\'s not a bubble'.split(';')
+  let intros: Array<string> = `intermittent things doer
+*not* a frontend dev...
+committed to the "tech hipster" bit
+lowercase enjoyer
+dont look at the site's source code it'll ruin your day
+just leave if you hate inconsistent capitalization
+this blog doesn't look good enough to call a "portfolio"`.split('\n')
 </script>
 
 <section class="py-20">
