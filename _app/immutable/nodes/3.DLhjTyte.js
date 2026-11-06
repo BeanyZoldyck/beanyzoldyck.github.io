@@ -1,8 +1,0 @@
-import{a as h,f}from"../chunks/BnlBESuq.js";import"../chunks/BWYPsfkb.js";import{p as u,o as v,t as x,R as p,u as w,a as g,s as c,c as m,r as l,e as M}from"../chunks/Cy5nAd-J.js";import{s as b}from"../chunks/DnGix9df.js";import{e as z,i as L}from"../chunks/D4heeUEx.js";import{i as _}from"../chunks/RTMoMeLD.js";import"../chunks/C9FuYKR2.js";import{s as R}from"../chunks/DRgFwExb.js";import{p as $}from"../chunks/BLhO8Zrg.js";import{r as d}from"../chunks/D8-nk48u.js";var q=f('<a class="border border-purple-700 px-6 py-3 text-purple-300 transition-colors hover:border-purple-500"> </a>');function A(s,r){u(r,!1);let t=$(r,"thing",8);_();var e=q(),o=v(e);x(a=>{R(e,"href",a),b(o,`[${t()??""}]`)},[()=>(p(d),p(t()),w(()=>d(`/${t()}`)))]),h(s,e),g()}var B=f(`<section class="py-20"><h1 class="mb-6 text-5xl font-bold text-purple-300 md:text-6xl">hi, i'm <span class="text-purple-200">chuka</span></h1> <div class="inline-flex"><p class="mb-8 text-xl text-purple-400 md:text-2xl"> </p></div> <div class="flex gap-4 col w-4 row svelte-1uha8ag"></div></section>`);function O(s,r){u(r,!1);let t=["about","blog","contact","projects","demos"],e=`intermittent things doer
-*not* a frontend dev...
-committed to the "tech hipster" bit
-lowercase enjoyer
-dont look at the site's source code it'll ruin your day
-just leave if you hate inconsistent capitalization
-this blog doesn't look good enough to call a "portfolio"`.split(`
-`);_();var o=B(),a=c(m(o),2),y=m(a),k=v(y,!0);l(a);var n=c(a,2);z(n,5,()=>t.sort(()=>Math.random()-.5),L,(i,j)=>{A(i,{get thing(){return M(j)}})}),l(n),l(o),x(i=>b(k,i),[()=>e.sort(()=>Math.random()-.5)[0]]),h(s,o),g()}export{O as component};
