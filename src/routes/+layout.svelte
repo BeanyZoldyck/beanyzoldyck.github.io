@@ -1,17 +1,17 @@
 <script lang="ts">
 	import './layout.css';
 	import { resolve } from '$app/paths';
-
   let blurbs: Array<string> = `artisinal, handwritten blogsite (no ai)
-completely handwritten website. (excluding the libraries...)
+completely handwritten website. (excluding the million libraries...)
 I manually wrote this site—including that em dash
 no matrices were multiplied in the making of this site
-No AI. just me, a keyboard, and copious free time
+No LLMs. just me, a keyboard, and copious free time
 I want the 2 people visiting this site to know: I didn't use AI to make this (0/2 care)
 all hallucinations on this site are my own
 chukaze.dev is 99.999% promptless!
-this site was madee by 1 (me) person and zero (0) GPUs`.split('\n')
-  const output = ``
+this site was made by 1 (me) person and zero (0) GPUs`.split('\n')
+  let index = $state(Number.parseInt(Math.abs(Math.random())*blurbs.length))
+  let blurb = $derived(blurbs[index]);
 	let { children } = $props();
 </script>
 
@@ -36,5 +36,5 @@ this site was madee by 1 (me) person and zero (0) GPUs`.split('\n')
 </main>
 
 <footer class="mt-12 border-t border-purple-900 py-6">
-	<div class="mx-auto max-w-4xl px-6 text-sm text-purple-500"> {blurbs.sort(() => Math.random() - 0.5)[0]}</div>
+	<div class="mx-auto max-w-4xl px-6 text-sm text-purple-500" onclick={()=>{index++; index %= blurbs.length}}> {blurb}</div>
 </footer>
