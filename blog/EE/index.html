@@ -13,27 +13,27 @@
 			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link href="../../_app/immutable/entry/start.DmNTPJ6V.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/Bky60dA6.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/start._KMXPoh-.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/C6SHHFsj.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CfcgkWnS.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BYrSnJ8e.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/v8EdbwX6.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Cq3x-GmW.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CPhh-PsW.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/wJVH547T.js" rel="modulepreload">
-		<link href="../../_app/immutable/entry/app.D3pJutS_.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/E3S0v0IN.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.uuZB86wr.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CcHmlIoS.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DCtnaJ90.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/eOZ7IwrU.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/9glsnonq.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/Cg-S_g9a.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BW-7aAQL.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/0.2YUKYKUC.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/0.vbtDL5yK.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/D0w_Xt9j.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DnMFwFP7.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/B8BtlvkT.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/BWpJp3tU.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/6.DMXbaF2c.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/CYGUFaSY.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/C0GJqfAg.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/6.DvqIsBS-.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/C4u1jLem.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BOK03mb5.js" rel="modulepreload">
 		<!--12qhfyh--><!----><!--udl200--><meta property="og:title" content="ezeoke encryption"/> <meta property="og:description" content="synopsis of a peculiar encryption algorithm I first made 7 years ago."/> <meta property="og:image" content=""/> <meta property="og:url" content="https://chukaze.dev"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="chukaze.dev"/> <meta name="twitter:description" content="Personal site"/> <meta name="twitter:image" content="https://chukaze.dev"/><!----><title>chukaze</title>
 		<link href="../../_app/immutable/assets/0.C6nWDKRk.css" rel="stylesheet">
@@ -67,19 +67,19 @@ For one, instead of randomly generating, the triplet set Q, the two messengers s
 This is mediated using the message metadata. Since the ordering of the triplets doesn’t matter, we use the lexicographical ordering permutation to encode a secret message that stores this index:</p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/ee5.png" alt="ciphertext -> ascii triplet -> ordinal ranking -> lexicographical encoding -> base 6 number"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
  The meta number is the truncated SHA256 hash of the mutual seed, multiplied by the message index. Two mutual parties with the same seed can recover this index by hashing the seed, dividing the Meta number by this hash to retrieve the message index, and add that to the seed to generate the correct Q set. Note that you don't need the seed to recover this meta number, it is just derived from the ciphertext triplet ordering.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
  One more addition to this algorithm, for every 30 characters a message has, we increment the index once more and regenerate the key dictionary so that the algorithm is resistant to frequency attacks. This is all in the demo as well.</p><!--]--><!--[-1--><p class="text-white break-words"> YkQgjUwrZCKn6F0Nqe7ruA3QwZr06Fur7KnCs24eqNCO0Neq4wxzVLf0mJHyRV1RiR8iTn8ksZEe2fE7QQvGRO2GGL
-</p><!--]--><!--]--></div> <div class="mt-15 border-l-2 border-purple-900 pl-6"><a class="text-lg text-purple-800" href="../../blog">← back</a></div></section><!--]--><!--]--><!----></main> <footer class="mt-12 border-t border-purple-900 py-6"><div class="mx-auto max-w-4xl px-6 text-sm text-purple-500">completely handwritten website. (excluding the million libraries...)</div></footer><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+</p><!--]--><!--]--></div> <div class="mt-15 border-l-2 border-purple-900 pl-6"><a class="text-lg text-purple-800" href="../../blog">← back</a></div></section><!--]--><!--]--><!----></main> <footer class="mt-12 border-t border-purple-900 py-6"><div class="mx-auto max-w-4xl px-6 text-sm text-purple-500">No LLMs. just me, a keyboard, and copious free time</div></footer><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1t17xaz = {
+					__sveltekit_m1v4gn = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.DmNTPJ6V.js"),
-						import("../../_app/immutable/entry/app.D3pJutS_.js")
+						import("../../_app/immutable/entry/start._KMXPoh-.js"),
+						import("../../_app/immutable/entry/app.uuZB86wr.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
