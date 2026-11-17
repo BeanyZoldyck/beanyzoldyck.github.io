@@ -46,7 +46,7 @@
 		{
 			link: 'prov',
 			title: 'provenance',
-			header: 'verifying video from the hardware up, 6 hours before it was due',
+			header: 'How do you actually trust anything you see on the internet?',
 			edited: 1794916967994,
       thumbnail: "https://chukaze.dev/pics/prov2.png"
 		},

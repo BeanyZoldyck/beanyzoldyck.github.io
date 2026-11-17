@@ -1,9 +1,9 @@
 This is a submission for the \a;MLH x DEV Writing Challenge;https://dev.to/mlh-hackathon;\n
-What I Built\n
-How do you actually trust anything you see on the internet?\n
+\n\n
 Trying to spot something that looks AI-generated isn't a reliable answer. My work at an AI UGC (user generated content) company, Magic Hour, shows me firsthand about how indistinguishable AI video can be to a non skeptical human eye. In addition to that, these video models are just getting better and more accessible, as if our parents didn't already believe \a;Will Smith would eat spagetti that sloppily.;https://tenor.com/view/will-smith-eating-spaghetti-will-smith-spaghetti-ai-gif-12546117032276153065;\n
-\img;prov0.jpg;original vs deepfake comparison;\n
-A large driving force in this innovation is the profit incentive to generate perceptually isomorphic video: \a;https://x.com/i/status/2060733019292348450;https://x.com/i/status/2060733019292348450; This is relatively harmless if the purpose is just to market overpriced frothy drinks at a low cost, but the problem arrives when malicious actors use this technology to cause all types of harm.\n
+A large driving force in this innovation is the profit incentive to generate perceptually isomorphic video:\n
+\img;ai.webp;example AI UGC ad for starbucks;https://x.com/i/status/2060733019292348450\n
+\a;;; This is relatively harmless if the purpose is just to market overpriced frothy drinks at a low cost, but the problem arrives when malicious actors use this technology to cause all types of harm.\n
 So how do we escape the Matrix? Considering that not even generative models/apis watermarking their outputs is enough, since someone who knows enough about the watermark, or about signal processing can undo it, it seems like we are out of luck. But alas, a beacon of light is found in the same thing that got us into this mess: math.\n
 Over the weekend at Hack The Nest at Eastern Michigan University, I wanted to solve this problem from the recording side: establish a verifiable capture history while the camera is running, rather than inspect a finished video and guess where it came from, as current approaches tend to do (see "deepfake detection").\n
 The "how"\n
@@ -16,8 +16,7 @@ That process is connected to a physical RFID tag. An ESP32 reads the card's exis
 Ultimately, it doesn't matter if you understand the implementation details. Just know, the cryptographic algorithms give a mathematical guarantee that video came from a camera feed. Now, you can rest easy knowing that Will Smith probably has much better table manners.\n
 \br\n
 Demo\n
-\img;prov3.jpg;Provenance verify tab showing a hardware verified capture next to a UGC twin;https://youtu.be/_rUICgSALcQ\n
-\img;prov4.jpg;Provenance arena tab showing the real on-site capture next to the UGC twin;https://youtu.be/_rUICgSALcQ\n
+\img;sd2.webp;Provenance arena tab showing the real on-site capture next to the UGC twin;https://youtu.be/_rUICgSALcQ\n
 Watch the demo: \a;https://youtu.be/_rUICgSALcQ;https://youtu.be/_rUICgSALcQ;\n
 \br\n
 Shortcomings\n
@@ -26,8 +25,7 @@ Shortcomings\n
 - Our second limitation is that verification is tied to the raw evidence we capture, not to an arbitrary upload. Every website that doesn't expressly make money from storing your files will transcode uploaded videos, changing resolution, bitrate, and codec for efficiency, which alters the pixel bytes and breaks the chain. Sharing or posting captured footage elsewhere means the original evidence file must accompany it, since a re-encoded version won't verify against the tag. Unlike the other limitation, this is a lot easier to overcome with either a custom codec (likely based on H.265 with an agreement on sites to not reencode these videos) or keeping evidence in video metadata combined with public keys signatures.\n
 \br\n
 Partner Technologies\n
-Vultr: making the app reachable\n
-We used Vultr for the backend, with Caddy handling HTTPS and reverse-proxying requests to the application server. HTTPS matters here because the browser capture app needs a secure context for camera access, Web Bluetooth, and Web Crypto.\n
+We used Vultr, Tiger Data, and Cursor/Grok Bot for different goals. Tiger Data was the backend that stored verification data so you could check videos at any time, and Grok Bot was set up using cursor agent to manage an S3 bucket automatically, checking the validity of its video contents. Vultr was for the backend, with Caddy handling HTTPS and reverse-proxying requests to the application server. HTTPS matters here because the browser capture app needs a secure context for camera access, Web Bluetooth, and Web Crypto.\n
 MLH Hardware Sidenote\n
 Getting the hosted app reachable was one problem. Getting our Raspberry Pis reachable without working monitors (see "Hackathon Experience" section...) was another...\n
 I built an ESP32-S3 dongle to solve that second problem. The S3 I had was a programmable usb stick, which allowed me to turn it into a USB network adapter for the Pi, using the ESP32's wifi. This part is tangential to our project, but potentially important for the future of MLH hadware at hackathons. The dongle's screen showed that address, letting me connect through SSH and/or VNC once those services were enabled.\n

@@ -46,7 +46,7 @@
 		},
     {
 			title: 'provenance',
-			desc: 'hardware level video verification at Hack The Nest',
+			desc: 'deepfakes hate this one trick',
 			link: 'prov',
 			created: 1794916967994,
 
