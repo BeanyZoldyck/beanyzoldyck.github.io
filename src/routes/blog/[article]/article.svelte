@@ -6,6 +6,7 @@
 	import KBT from './KBT.txt?raw';
 	import EE from './EE.txt?raw';
 	import bearhacks from './bearhacks.txt?raw';
+	import prov from './prov.txt?raw';
 	const { article } = $props();
 	// svelte-ignore state_referenced_locally
 	switch (article.link) {
@@ -23,6 +24,9 @@
 			break;
 		case 'bearhacks':
 			content = bearhacks;
+			break;
+		case 'prov':
+			content = prov;
 			break;
 		default:
 			content = '';

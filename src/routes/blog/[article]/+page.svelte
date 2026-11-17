@@ -43,6 +43,13 @@
       thumbnail: ""
 
     },
+		{
+			link: 'prov',
+			title: 'provenance',
+			header: 'verifying video from the hardware up, 6 hours before it was due',
+			edited: 1794916967994,
+      thumbnail: "https://chukaze.dev/pics/prov2.png"
+		},
 	];
 	function getArticle(ref: string): ArticleData {
 		for (const article of articles) {
