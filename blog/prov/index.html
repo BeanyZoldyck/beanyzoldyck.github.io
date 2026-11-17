@@ -13,27 +13,27 @@
 			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link href="../../_app/immutable/entry/start.B13sOvVl.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/D4FuvA3p.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/start.CQ7VBFGx.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BLbd8CDT.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CfcgkWnS.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BYrSnJ8e.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/DKbFm41g.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DVC0fzNM.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CPhh-PsW.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/i239cram.js" rel="modulepreload">
-		<link href="../../_app/immutable/entry/app.BR_jWDTB.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Cm1Tb-Ss.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.CBL9V0WG.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CcHmlIoS.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DCtnaJ90.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/eOZ7IwrU.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/9glsnonq.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/Cg-S_g9a.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BW-7aAQL.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/0.CiNLgi_P.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/0.DbhkPyj7.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/D0w_Xt9j.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DnMFwFP7.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/B8BtlvkT.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/D6UE2wGH.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/6.B4WXUP-t.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/BTtzkRX7.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/C3d6kT_A.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/6.DWVmHsWF.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Cs_SAwfX.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BOK03mb5.js" rel="modulepreload">
 		<!--12qhfyh--><!----><!--udl200--><meta property="og:title" content="provenance"/> <meta property="og:description" content="How do you actually trust anything you see on the internet?"/> <meta property="og:image" content="https://chukaze.dev/pics/prov2.png"/> <meta property="og:url" content="https://chukaze.dev"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="chukaze.dev"/> <meta name="twitter:description" content="Personal site"/> <meta name="twitter:image" content="https://chukaze.dev"/><!----><title>chukaze</title>
 		<link href="../../_app/immutable/assets/0.CrpxH3Cf.css" rel="stylesheet">
@@ -60,11 +60,11 @@ Watch the demo: <a class="text-purple-500" target="_blank"></a> <!----> <a class
 Shortcomings</p><!--]--><!--[-1--><p class="text-white break-words">
 - The segment limitation adds a some overhead where the final video must be stitched together from the segments. This is why there was flickering on the first playback of the videos in the demo.</p><!--]--><!--[-1--><p class="text-white break-words">
 - Establishing that those bytes came from a physical camera also depends on trusting the capture app. Our prototype enforces that camera-only path at the app level, but doesn't know that a device is not compromised. To be honest though, learning a bit about kernel level anti-cheats makes me feel like even that's an impossible ask, so it would likely have to be implemented at the hardware level.</p><!--]--><!--[-1--><p class="text-white break-words">
-- Our second limitation is that verification is tied to the raw evidence we capture, not to an arbitrary upload. Every website that doesn't expressly make money from storing your files will transcode uploaded videos, changing resolution, bitrate, and codec for efficiency, which alters the pixel bytes and breaks the chain. Sharing or posting captured footage elsewhere means the original evidence file must accompany it, since a re-encoded version won't verify against the tag. Unlike the other limitation, this is a lot easier to overcome with either a custom codec (likely based on H.265 with an agreement on sites to not reencode these videos) or keeping evidence in video metadata combined with public keys signatures.</p><!--]--><!--[2--><hr class="border-t border-purple-800 my-12"/><!--]--><!--[-1--><p class="text-white break-words">
+- Our second limitation is that verification is tied to the raw evidence we capture, not to an arbitrary upload. Every website that doesn't expressly make money from storing your files will compress uploaded videos, changing resolution, bitrate, and codec for efficiency, which alters the pixel bytes and breaks the chain. Sharing or posting captured footage elsewhere means the original evidence file must accompany it, since a re-encoded version won't verify against the tag. Unlike the other limitation, this is a lot easier to overcome with either a custom codec (likely based on H.265 with an agreement on sites to not reencode these videos) or keeping evidence in video metadata combined with public key signatures.</p><!--]--><!--[2--><hr class="border-t border-purple-800 my-12"/><!--]--><!--[-1--><p class="text-white break-words">
 Partner Technologies</p><!--]--><!--[-1--><p class="text-white break-words">
 We used Vultr, Tiger Data, and Cursor/Grok Bot for different goals. Tiger Data was the backend that stored verification data so you could check videos at any time, and Grok Bot was set up using cursor agent to manage an S3 bucket automatically, checking the validity of its video contents. Vultr was for the backend, with Caddy handling HTTPS and reverse-proxying requests to the application server. HTTPS matters here because the browser capture app needs a secure context for camera access, Web Bluetooth, and Web Crypto.</p><!--]--><!--[-1--><p class="text-white break-words">
 MLH Hardware Sidenote</p><!--]--><!--[-1--><p class="text-white break-words">
-Getting the hosted app reachable was one problem. Getting our Raspberry Pis reachable without working monitors (see "Hackathon Experience" section...) was another...</p><!--]--><!--[-1--><p class="text-white break-words">
+Getting the hosted app reachable was one problem. Getting our Raspberry Pi reachable without working monitors (see "Hackathon Experience" section...) was another...</p><!--]--><!--[-1--><p class="text-white break-words">
 I built an ESP32-S3 dongle to solve that second problem. The S3 I had was a programmable usb stick, which allowed me to turn it into a USB network adapter for the Pi, using the ESP32's wifi. This part is tangential to our project, but potentially important for the future of MLH hadware at hackathons. The dongle's screen showed that address, letting me connect through SSH and/or VNC once those services were enabled.</p><!--]--><!--[1--><p class="text-white"><!--[--><!---->
 Showcase: <a class="text-purple-500" target="_blank"></a> <!----> <a class="text-purple-500" href="https://youtu.be/ARSFQobbRds" target="_blank">https://youtu.be/ARSFQobbRds</a> <!--]--></p><!--]--><!--[0--><a href="https://youtu.be/_rUICgSALcQ" target="_blank"><img src="../../pics/maxresdefault.webp" alt="Provenance arena tab showing the real on-site capture next to the UGC twin"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
 With the event's wifi credentials configured on the dongle, I could bootstrap a Pi without attaching a keyboard, monitor, or Ethernet cable.</p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/prov5.png" alt="Price difference of the S3 dongle and portable screens showing dongles around $15 and portable screens starting from $45"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
@@ -83,15 +83,15 @@ In the face of what felt like endless trials, Nitin and I stayed resolute and go
 			
 			<script>
 				{
-					__sveltekit_sdw18a = {
+					__sveltekit_15tm29n = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.B13sOvVl.js"),
-						import("../../_app/immutable/entry/app.BR_jWDTB.js")
+						import("../../_app/immutable/entry/start.CQ7VBFGx.js"),
+						import("../../_app/immutable/entry/app.CBL9V0WG.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
