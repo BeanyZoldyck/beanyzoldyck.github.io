@@ -7,10 +7,10 @@ Attended events, projects, and outcomes. Compiled 2026-11-18 from the [Devpost p
 | | |
 |---|---|
 | Events attended | 14 (13 in person, 1 online) |
-| Additional event covered by Nitin | 1 (Hack Dearborn 2026) |
-| Awards | 12 personally, 14 as a team |
+| Additional events covered by Nitin | 2 (SpartaHack 11, Hack Dearborn 5) |
+| Awards | 12 personally, 15 as a team |
 | Overall 1st places | 2 |
-| 2026 Midwest record | 8 entered, 8 podiums |
+| 2026 Midwest record | 9 entered, 9 podiums (7 personally) |
 | 2026 losses | 2, both outside the Midwest |
 
 **Awards breakdown**
@@ -18,7 +18,8 @@ Attended events, projects, and outcomes. Compiled 2026-11-18 from the [Devpost p
 - Overall 1st: Tether (WayneHacks 4), RobBoss (Hack Dearborn 5, Nitin)
 - Overall 2nd: PinPoint (Grizzhacks 8), Provenance (Hack The Nest)
 - Track 1st: Hijac (JacHacks, Social Impact), :Peeki (MHacks 2026, Relay)
-- Sponsor: Checkpoint ×2 (RocketHacks), X Wrapped (FalconHacks), MOGGIE ×2 (Berkeley), Ender's Bench (Cal Hacks), PinPoint (MLH Vultr), RobBoss (Gemini)
+- Special: Triad (SpartaHack 11, Best Accessibility Hack), Ender's Bench (Cal Hacks, Best Use of Spacetime)
+- Sponsor: Checkpoint ×2 (RocketHacks), X Wrapped (FalconHacks), MOGGIE ×2 (Berkeley), PinPoint (MLH Vultr), RobBoss (Gemini)
 
 ## Events
 
@@ -26,6 +27,7 @@ Attended events, projects, and outcomes. Compiled 2026-11-18 from the [Devpost p
 |---|---|---|---|---|
 | Sep 27–28, 2025 | MHacks 2025 | Ann Arbor, MI | — | no submission on record |
 | Oct 11–12, 2025 | Hack Dearborn: Escape Reality | Dearborn, MI | BabbleFish | lost Gemini track |
+| Jan 31–Feb 1, 2026 | SpartaHack 11 | East Lansing, MI | Triad | Best Accessibility Hack (Nitin) |
 | Mar 14–15, 2026 | RocketHacks 2026 | Toledo, OH | Checkpoint | Hardware Track + Jaseci Agentic AI |
 | Mar 21, 2026 | FalconHacks by MongoDB | Bowling Green, OH | X Wrapped | Best Use of Magic Hour |
 | Mar 28–29, 2026 | Grizzhacks 8 | Rochester, MI | PinPoint | 2nd Overall + MLH Vultr |
@@ -53,6 +55,13 @@ Oct 11–12, 2025 · Dearborn, MI
 **BabbleFish** — Chrome extension that summarizes, translates, and semantically searches chat channels using Gemini. Built with Nitin.
 
 Lost the Gemini track to a project that didn't use Gemini. [Devpost](https://devpost.com/software/babelfetch)
+
+### SpartaHack 11
+Jan 31–Feb 1, 2026 · East Lansing, MI
+
+**Triad** — "uncompromising trimodal remote computer accessibility." Screen capture and OpenCV region detection, with eye tracking, hand gestures, and voice as input, all running locally. Built with Nitin, Minh Nguyen, Lam Vu, and Pedro Paiva.
+
+Won Best Accessibility Hack. Attended by Nitin; this is the earliest podium of the 2026 Midwest run. [Devpost](https://devpost.com/software/the-four)
 
 ### RocketHacks 2026
 Mar 14–15, 2026 · Toledo, OH
@@ -150,5 +159,5 @@ Nov 14–15, 2026 · Ypsilanti, MI
 - **What counts as a win:** leaving with any prize. Only two of the 14 awards are overall first places; the rest are seconds, track wins, and sponsor awards.
 - **Provenance's 2nd place** comes from the write-up. The Devpost page has no winner ribbon.
 - **Insforge is online**, so it sits outside the in-person count even though it appears in this record.
-- **This file lists attended events only.** About 88 in-person Midwest hackathons ran in 2026; the team entered 8 of them and placed at all 8. The two 2026 losses, BearHacks and JacHacks SF, were both outside the Midwest.
+- **This file lists attended events only.** About 88 in-person Midwest hackathons ran in 2026; the team entered 9 of them and placed at all 9. The two 2026 losses, BearHacks and JacHacks SF, were both outside the Midwest.
 - **2025:** one loss (BabbleFish) and one event with no submission (MHacks 2025).
