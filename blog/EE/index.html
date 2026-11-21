@@ -13,27 +13,27 @@
 			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link href="../../_app/immutable/entry/start.CFerMESK.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/Jieg7ARN.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/start.CkC7xYJ5.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/ByvQREhO.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CfcgkWnS.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BYrSnJ8e.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/QtC4M1g8.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/-E6L9Zhb.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CPhh-PsW.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/NmxZ1K2Q.js" rel="modulepreload">
-		<link href="../../_app/immutable/entry/app.BbvA2870.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BJyt6Afv.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.BO1yZ5Xg.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CcHmlIoS.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DCtnaJ90.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/eOZ7IwrU.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/9glsnonq.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/Cg-S_g9a.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BW-7aAQL.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/0.DhJ3xj4i.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/0.ClIMSzAg.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/D0w_Xt9j.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DnMFwFP7.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/B8BtlvkT.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/BL1mQ9-n.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/6.BCEUfV6r.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/Cqw7Plu4.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BHr6nX9B.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/6.B76aBdwf.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Q9ixjBC_.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BOK03mb5.js" rel="modulepreload">
 		<!--12qhfyh--><!----><!--udl200--><meta property="og:title" content="ezeoke encryption"/> <meta property="og:description" content="synopsis of a peculiar encryption algorithm I first made 7 years ago."/> <meta property="og:image" content=""/> <meta property="og:url" content="https://chukaze.dev"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="chukaze.dev"/> <meta name="twitter:description" content="Personal site"/> <meta name="twitter:image" content="https://chukaze.dev"/><!----><title>chukaze</title>
 		<link href="../../_app/immutable/assets/0.CrpxH3Cf.css" rel="stylesheet">
@@ -48,38 +48,38 @@ It may seem as if that is a random mash of characters, which it is, but I assure
  Ezeoke Encryption takes in a limited range of ASCII characters, those useful in communication, and outputs encrypted data that can’t be interpreted. The output itself is 100% ASCII as well. The quirk of this algorithm is that it is nondeterministic: the same input text doesn't output the same encrypted data. However, that ciphertext can always decrypt to the same input.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
 The first hurdle when making an algorithm like this is deciding which characters to include. I settled on the upper and lowercase alphabet, punctuation marks, and every symbol I deemed useful or common enough to be included. For the sake of simplicity, the set of possible inputs to the algorithm will be referred to as P.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
 Method</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
-The first task is to generate values for each element in P (with cryptographically safe random number generation of course). These values are what our input text will be converted to. We will call the set of possible characters in the ciphertext R. Example showing a some possible inputs P mapping to valid outputs:</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/ee1.png" alt="figure showing how inputs can be mapped to random outputs"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
+The first task is to generate values for each element in P (with cryptographically safe random number generation of course). These values are what our input text will be converted to. We will call the set of possible characters in the ciphertext R. Example showing a some possible inputs P mapping to valid outputs:</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="/pics/ee1.png" target="_blank"><img src="../../pics/ee1.png" alt="figure showing how inputs can be mapped to random outputs"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
 or X -> Q s.t. X ⊂ P, Q = {(i,j,k) i,j,k ∈ R}, |Q| = |X|</p><!--]--><!--[-1--><p class="text-white break-words">We will continue use Q to mean an example instantiation of cipher text.</p><!--]--><!--[-1--><p class="text-white break-words"> 
-We must also define a mapping for these values of Q. We always use a=2, b=3, c=5 and so on, mapping every possible output (ASCII lowercase, uppercas, then digits) to a prime number. The algorithm is essentially impossible without some type of constant.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/ee2.png" alt="showing prime mappings"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
+We must also define a mapping for these values of Q. We always use a=2, b=3, c=5 and so on, mapping every possible output (ASCII lowercase, uppercas, then digits) to a prime number. The algorithm is essentially impossible without some type of constant.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="/pics/ee2.png" target="_blank"><img src="../../pics/ee2.png" alt="showing prime mappings"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
 
 
 
 Encryption</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
-So far, the algorithm has generated two dictionaries: elements of P to three random characters (Q), such that each character is an element of R, and elements of R to prime numbers. The algorithm goes through the P -> Q mapping, and using each of the three characters, plugs them into the prime number dictionary (see Figure 2.), and multiples them before returning the product of the three prime numbers. Like so: </p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/ee3.png" alt="showing keygen"/></a> <br/><!--]--><!--[1--><p class="text-white"><!--[--><!---->
+So far, the algorithm has generated two dictionaries: elements of P to three random characters (Q), such that each character is an element of R, and elements of R to prime numbers. The algorithm goes through the P -> Q mapping, and using each of the three characters, plugs them into the prime number dictionary (see Figure 2.), and multiples them before returning the product of the three prime numbers. Like so: </p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="/pics/ee3.png" target="_blank"><img src="../../pics/ee3.png" alt="showing keygen"/></a> <br/><!--]--><!--[1--><p class="text-white"><!--[--><!---->
 
 These products make up the key. Each product, according to the <a class="text-purple-500" target="_blank"></a> <!----> <a class="text-purple-500" href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic" target="_blank">Fundamental Theorem of Arithmetic</a>  can only be written in terms of the three unique prime numbers that were multiplied to get it.<!--]--></p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
-We append the complete key to the message, using character delimiters for the products, that have the ordered products for every elemnent of P (possible inputs). By assembling the map from every character in P to the random triplet like so</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/ee4.png" alt="showing keygen"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
+We append the complete key to the message, using character delimiters for the products, that have the ordered products for every elemnent of P (possible inputs). By assembling the map from every character in P to the random triplet like so</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[0--><a href="/pics/ee4.png" target="_blank"><img src="../../pics/ee4.png" alt="showing keygen"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
 We can now take the random output back to our plaintext!</p><!--]--><!--[2--><hr class="border-t border-purple-800 my-12"/><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
 
 Thus far is the (altered) write up I made a few years back when I didn’t have a direction for this project. You may have noticed that the algorithm described is closer to obfuscation considering you send the key with the message. This means that with knowledge of the algorithm, you could easily decrypt messages.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
 Recently, though, I made some additions to the algorithm that’s solve this problem so it can actually be called encryption:</p><!--]--><!--[-1--><p class="text-white break-words"> 
 For one, instead of randomly generating, the triplet set Q, the two messengers share a private key that the RNG is seeded from. After sending a message you increment the seed so that the next exchange is not the same as last. </p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
-This is mediated using the message metadata. Since the ordering of the triplets doesn’t matter, we use the lexicographical ordering permutation to encode a secret message that stores this index:</p><!--]--><!--[0--><a href="" target="_blank"><img src="../../pics/ee5.png" alt="ciphertext -> ascii triplet -> ordinal ranking -> lexicographical encoding -> base 6 number"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
+This is mediated using the message metadata. Since the ordering of the triplets doesn’t matter, we use the lexicographical ordering permutation to encode a secret message that stores this index:</p><!--]--><!--[0--><a href="/pics/ee5.png" target="_blank"><img src="../../pics/ee5.png" alt="ciphertext -> ascii triplet -> ordinal ranking -> lexicographical encoding -> base 6 number"/></a> <br/><!--]--><!--[-1--><p class="text-white break-words">
  The meta number is the truncated SHA256 hash of the mutual seed, multiplied by the message index. Two mutual parties with the same seed can recover this index by hashing the seed, dividing the Meta number by this hash to retrieve the message index, and add that to the seed to generate the correct Q set. Note that you don't need the seed to recover this meta number, it is just derived from the ciphertext triplet ordering.</p><!--]--><!--[-1--><p class="text-white break-words"></p><!--]--><!--[-1--><p class="text-white break-words">
  One more addition to this algorithm, for every 30 characters a message has, we increment the index once more and regenerate the key dictionary so that the algorithm is resistant to frequency attacks. This is all in the demo as well.</p><!--]--><!--[-1--><p class="text-white break-words"> YkQgjUwrZCKn6F0Nqe7ruA3QwZr06Fur7KnCs24eqNCO0Neq4wxzVLf0mJHyRV1RiR8iTn8ksZEe2fE7QQvGRO2GGL
-</p><!--]--><!--]--></div> <div class="mt-15 border-l-2 border-purple-900 pl-6"><a class="text-lg text-purple-800" href="../../blog">← back</a></div></section><!--]--><!--]--><!----></main> <footer class="mt-12 border-t border-purple-900 py-6"><div class="mx-auto max-w-4xl px-6 text-sm text-purple-500">I manually wrote this site—including that em dash</div></footer><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+</p><!--]--><!--]--></div> <div class="mt-15 border-l-2 border-purple-900 pl-6"><a class="text-lg text-purple-800" href="../../blog">← back</a></div></section><!--]--><!--]--><!----></main> <footer class="mt-12 border-t border-purple-900 py-6"><div class="mx-auto max-w-4xl px-6 text-sm text-purple-500">chukaze.dev is 99.999% promptless!</div></footer><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1oeexgw = {
+					__sveltekit_1t5wux = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.CFerMESK.js"),
-						import("../../_app/immutable/entry/app.BbvA2870.js")
+						import("../../_app/immutable/entry/start.CkC7xYJ5.js"),
+						import("../../_app/immutable/entry/app.BO1yZ5Xg.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
